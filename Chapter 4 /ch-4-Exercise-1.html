@@ -1,0 +1,55 @@
+<html>
+<head><title>Ch 4-Lab Exercise-1</title>
+<style>
+input#add{
+font-style:italic;
+}
+</style>
+<script type="text/javascript">
+ function add()
+ {
+       
+   var a=parseInt(document.getElementById('no1').value);
+   var b=parseInt(document.getElementById('no2').value);
+   var add=a+b;
+   document.getElementById('add').value=add;
+ }
+   
+   function sub()
+ {
+   var a=parseInt(document.getElementById('no1').value);
+   var b=parseInt(document.getElementById('no2').value);
+   var sub=a-b;
+   document.getElementById('sub').innerHTML='<b>' +sub;
+ }
+</script>
+</head>
+<body>
+<h1>Lab Exercise 1</h1><br>
+  <table>
+   <tr>
+      <td>First Number::</td>
+      <td> <input type='text' id='no1'></td>
+   </tr>
+   <tr>
+      <td>Second Number::</td>
+      <td> <input type='text' id='no2'></td>
+   </tr>
+   <tr>
+      <td>Addition::</td>
+      <td> <input type='text' id='add'></td>
+   </tr>
+   <tr>
+      
+      <td>Substration::</td>
+      <td id='sub'></td>
+   </tr>
+   <tr>
+      <td colspan='2'>
+      <input type ='button' value='ADD' onclick='add()'>
+      <input type ='button' value='SUB' onclick='sub()'>
+      </td>
+ </tr>	
+  </table>
+</body>
+</html> 

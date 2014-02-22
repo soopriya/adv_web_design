@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Chapter 1 - Lab Exercise 1</title>
+</head>
+<body>
+<h1>Lab Exercise 1</h1><br>
+<p>A. Displaying website links on a HTML page (like google, facebook and use images to
+link this websites)
+</p>
+<hr>
+<a href="http://google.com">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMuD_rCIEOe3BU041kGtab35JvPZjie0epkXct6zQaXt8iWtCN" alt="sample_image" height="100" weight="200"></img></a><br><br>
+<a href="http://facebook.com">
+<img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="sample_image" height="100" weight="200"></img></a><br>
+
+<p>B. Displaying list of colors and fruits using ul and ol respectively.</p>
+<hr>
+
+<ul>
+<li>Orange</li>
+<li>Green</li>
+<li>pink</li>
+</ul>
+
+<ol>
+<li>Mango</li>
+<li>chikoo</li>
+<li>gava</li>
+</ol>
+
+<p>C.Displaying four different images and move them using marquee left-right and right-left
+</p>
+<hr>
+<marquee direction="left"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTjlz0eYHrzmEgWQ-xCtzyxIkA6YoZHpG0DnucD1syQXtTLyoZvuQ" alt="sample_image" height="100" weight="200"></img></marquee>
+
+<marquee direction="right"><img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRB3oGltLj2h94dSLkcil5qDfQB-iGabn3Z1Y2pIb5X77qmBcwY" alt="sample_image" height="100" weight="200"></img></marquee>
+
+<marquee direction="left"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtOpghqaqVsn_ElQ-9ERLxUffj8sQ9frGD7JWLgZSz_5vKia_P" alt="sample_image" height="100" weight="200"></img></marquee>
+
+<marquee direction="right"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRwezZKYm7TcibLmJFQqAJ_tZMRLy-0tpW40PKtwi7J4i3M2gl6" height="100" weight="200"></img></marquee>
+
+
+
+
+</body>
+</html>

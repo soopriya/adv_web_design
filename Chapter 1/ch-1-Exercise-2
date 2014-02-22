@@ -1,0 +1,49 @@
+<html>
+<head><title>Ch 1- Lab Exercise 2</title></head>
+<body>
+<h2>Lab Exercise 2</h2>
+<h4 style="padding-left: 40px;"><u>Student Resistration Form</u></h4>
+<form action='demo2.html' method='get'>
+First name:
+  <input style="margin: 2px 50px 2px 45px;" type='text' name='fname'><br>
+Last name:
+  <input style="margin: 2px 50px 2px 50px;" type='text' name='lname'><br>
+Password:
+  <input style="margin: 2px 50px 2px 55px;" type='password' name='pwd'><br>
+Select Gender:
+  <input style="margin-left: 25px;" type='radio' name='sex'>
+Male
+<input type='radio' name='sex'>
+Female <br>
+  
+Select Hobbies:
+
+  <input style="margin-left: 18px;" type='checkbox' name='hobbies'>
+playing
+
+ <input type='checkbox' name='hobbies'>
+dancing
+<br>
+  <input style="margin-left: 140px;" type='checkbox' name='hobbies' >
+trekking
+
+ <input type='checkbox' name='hobbies'>
+travlling
+<br>
+
+Select City:
+<select style="margin: 5px 50px 5px 50px;">
+  <option value="volvo">Select</option>
+  <option value="volvo">Pune</option>
+  <option value="saab">Mumbai</option>
+  <option value="mercedes">Benglore</option>
+  <option value="audi">Delhi</option>
+</select><br> 
+Your Comments:
+<textarea style="margin: 5px 50px 5px 10px;" rows='3' cols='30'></textarea>
+<br>
+<input type='submit' value='Submit'>
+<input style="margin-left: 65px;"type='reset' value='Cancel'><br>
+</form>
+</body>
+</html>

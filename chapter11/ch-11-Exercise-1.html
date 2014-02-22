@@ -1,0 +1,27 @@
+<html>
+ <head><title>Ch 11- Lab Exercise 1</title>
+   </head>
+
+ <body>
+<h2>Lab Exercise-1</h2>
+  <button id='b1'>hide para</button>
+  <button id='b2'>show para</button>
+  <button id='b3'>hide/show para</button>
+  <div>A HTML marquee is a scrolling piece of text displayed either horizontally across or vertically down your web site page depending on the settings.</div><hr>
+  <script src='jquery.js'></script>
+  <script> 
+  $('#b1').click(function(){
+	$('div').hide(3000);
+  });
+
+  $('#b2').click(function(){
+	$('div').show('slow');
+  });
+
+
+  $('#b3').click(function(){
+	$('div').toggle('fast');
+  });
+  </script>
+ </body>
+</html>

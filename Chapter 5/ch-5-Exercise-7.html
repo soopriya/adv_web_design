@@ -1,0 +1,35 @@
+<html>
+ <head>
+   <title></title>
+  <script type="text/javascript">
+   numbers = new Array();
+   var a=parseInt(prompt('Enter no 1'));
+   var b=parseInt(prompt('Enter no 2'));
+   var c=parseInt(prompt('Enter no 3'));
+   var d=parseInt(prompt('Enter no 4'));
+   var e=parseInt(prompt('Enter no 5'));
+   numbers.push(a,b,c,d,e);
+   document.write("You entered numbers are - </br>");	
+   for(i=0; i<numbers.length; i++) 
+   {
+	document.write(numbers[i]+"</br>");
+   }
+
+   var temp = numbers[1]; 	
+   for(i=0; i<numbers.length; i++) 
+   {	
+	if(numbers[i]<temp)
+           temp = numbers[i];
+   }
+   document.write("Minimum number is - "+ temp+"</br>");	  
+   for(i=0; i<numbers.length; i++) 
+   {	
+       if(numbers[i]>temp)
+           temp = numbers[i];
+   }
+   document.write("Maximum number is - "+ temp+"</br>");	  
+  </script>
+ </head>
+<body>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>ch-5-Lab Exercise-5</title><hr>
+<style>
+table
+{
+ width:400px;
+ height:600px;
+ margin:50px auto;
+ border:2px solid blue;
+ border-collapse:collapse;
+}
+
+table,th
+{
+border:1px solid blue;
+}
+</style>
+
+<script>
+  document.write('<table>');
+  for(r=1;r<=10;r++)
+  {
+    if(r%2==0)
+    {
+     document.write("<tr style='background:black; color:white'>");
+     }
+     else
+      {
+       document.write('<tr>');
+      }
+
+   for(c=1;c<=10;c++)
+   {
+
+     document.write('<th>'); 
+     document.write(+c+'*'+r+'='+(c*r));
+     document.write('</th>');   
+
+   }
+
+ 
+    document.write('</tr>');
+  }
+     document.write('<table>');
+
+</script>
+</head>
+<body>
+<h2>Lab Exercise 5</h2>
+</body>
+
+</html>
+

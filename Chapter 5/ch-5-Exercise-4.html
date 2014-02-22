@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+var a = prompt('Enter number');
+var ans = fact(a);
+document.write("Entered no is " +a);
+document.write("<br>Factorial is " +ans);
+ function fact(x) 
+{
+   if(x==0) {
+      return 1;
+   }
+   return x * fact(x-1);
+}
+</script>
+</head>
+<body>
+</body>
+</html>
