@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Ch 2- Lab Exercise 4</title>
+<style>
+
+#main {
+    background: none repeat scroll 0 0 #FFA500;
+    margin: 5px auto;
+    padding-bottom: 30px;
+    width: 1245px;
+    height: 820px;
+}
+
+
+#site_content {
+    margin: 0 5px 0 5px;
+    overflow: hidden;
+    width: 1245px;
+}
+
+
+
+#sidebar_container {
+    float: left;
+    margin: 20px;
+    width: 600px;
+}
+
+
+#content {
+    float: right;
+    margin: 20px;
+    width: 490px;
+    border: solid 3px gray;
+    border-radius: 20px;
+    
+}
+
+#nav {
+    background-color: #0000FF;
+    border-radius: 20px;
+ 	 width: 455px;	
+}
+
+
+ul, li, a{
+	font-weight: bolder;	
+	list-style-type: none;
+	display: inline;
+	text-decoration: none;
+	color: white;
+}
+
+li {
+    margin: 0 55px 0 0;
+}
+
+#regForm{
+height: 300px;
+width: 650px;
+position: absolute; 
+top: 550px; 
+right: 350px; 
+bottom: 0px; 
+left: 380px;
+float:center;
+
+background-image: url("1.jpg");
+background-size:100%; 
+
+
+}
+
+#tabulerForm {
+	width: 550px;
+    bottom: 0;
+    left: 70px;
+    position: relative;
+    right: -20px;
+    top: 50px;
+    width: 400px;
+}
+
+
+#regTitle{
+  color: #000080;
+    position: absolute;
+    right: 480px;
+    top: 520px;
+    z-index: 1;
+}
+
+ h1 {letter-spacing:3px}
+
+</style>
+</head>
+<body>
+<div id="main">
+<div id="site_content">
+<div id="sidebar_container">
+<h1><i>
+<font color="blue">Learing At Fun School</font>
+</i></h1>
+<div id="nav">
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="products.html">Contact Us</a></li>
+<li><a href="home.html">Branches</a></li>
+</ul>
+</div>
+ 
+<h3 style="color:white"><i><q>Education is the manifestation
+of the perfection already in man.</q></i>
+</h3>
+
+<h4 style="color:000080" align="right"><i>Swami Vivekananda</i></h4>
+
+<h3 style="color:blue">Introduction</h3>
+
+<p>
+Established in 1978, Fun School Pune is in its 36th year of service to the student community. It remains the flagship brand of Symbiosis and is recognized as one of the best Business Schools in India. In the year 1979, SIBM Pune proved its pioneering self by becoming the only institute in Pune to organize a seminar outside the city precincts - in Mumbai. Soon the trend was set and others followed suit. The concept of Internships / Summer Training was another offering made by SIBM to Pune. It was in 1982 that learning cum training scheme was started.
+</p>
+
+</div>
+<div id="content">
+<span id="image"><img width="490" height="450" src="3.jpg" alt="photo_two" /></span>
+</div>
+
+<h3 id="regTitle" style="color:000080" align="center">Registration Form</h3>
+
+<div id="regForm">
+
+
+<div id="tabulerForm">
+<table width="200px;" height="200px;" bgcolor="#99CCFF" align="left">
+
+<tr><td>
+<label>First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+</tr>
+
+<tr><td>
+<label>Last Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+</tr>
+
+<tr><td>
+<label>e-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+</tr>
+
+<tr><td>
+<label>Phone No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</label></td>
+</tr>
+
+
+</table>
+
+<table width="300px;" height="200px;" bgcolor="blue" align="right">
+
+
+<tr><td>
+<input type="text" size="10"/></td>
+</tr>
+<tr><td>
+<input type="text" size="10"/></td>
+</tr>
+<tr><td>
+<input type="text" size="10"/></td>
+</tr>
+
+<tr><td>
+<input type="text" size="10"/></td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
+

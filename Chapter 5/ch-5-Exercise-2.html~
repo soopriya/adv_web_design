@@ -3,7 +3,7 @@
 <script>
 var n1 = parseInt(prompt("Enter first no."));
 var n2 = parseInt(prompt("Enter second no."));  
-var c = confirm("Do you want to perform addition of these two no's ?");
+var c = confirm("Do you want to perform addition of those two no's ?");
 if(c == true)
 {
   alert("Addition of entered two no's is = "+(n3=n1+n2));
