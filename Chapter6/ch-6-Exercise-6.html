@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 6-Lab Exercise 6</title>
+<style>
+table {
+    border: 2px solid red;
+    border-collapse: collapse;
+    position: relative;
+    left: 400px;
+    height: 230px;
+    width: 500px;
+    text-align: left;	
+}
+
+td,th{
+padding:15px;
+border: 2px solid red;
+}
+
+h3
+{
+// color:blue;
+ text-align: center;
+ //text-decoration:underline;
+}
+td
+{
+  color:red;
+  width:250px;
+}
+</style>
+<Script Language="JavaScript">
+   var name = prompt('Enter name ');
+   var sub1 = parseInt(prompt('Enter Sub1 Marks'));
+   var sub2 = parseInt(prompt('Enter Sub2 Marks'));
+   var sub3 = parseInt(prompt('Enter Sub3 Marks'));
+document.write("<h3>Chapter 6-Lab Exercise 6:Event Handling and Client Side Validation</h3>");   
+document.write("<table>");
+document.write("  <tr>");
+document.write("   <th>Student name</th>");
+document.write("   <td><span id='name'> </span></td>");
+document.write(" </tr>");
+document.write("  <tr>");
+document.write("    <th>Sub1 Marks</th>");
+document.write("    <td><span id='sub1'> </span></td>");
+document.write("  </tr>");
+document.write("  <tr>");
+document.write("    <th>Sub2 Marks</th>");
+document.write("    <td><span id='sub2'> </span></td>");
+document.write("  </tr>");
+document.write("  <tr>");
+document.write("    <th>Sub3 Marks</th>");
+document.write("    <td><span id='sub3'> </span></td>");
+document.write("  </tr>");
+document.write("  <tr>");
+document.write("    <th>Total Marks</th>");
+document.write("   <td><span id='total' onclick='calTotal(sub1,sub2,sub3);'>Click Here To Get Total</span></td>");
+document.write("  </tr>");
+document.write("  <tr>");
+document.write("    <th>Percentage</th>");
+document.write("    <td><span id='percentage' onclick='calPercentage(sub1,sub2,sub3);'>Click Here To Get Percentage</span></td>");
+document.write("  </tr>");
+document.write("  <tr>");
+document.write("    <th>Grade</th>");
+document.write("    <td><span id='grade' onclick='calGrade(sub1,sub2,sub3);'>Click Here To Get Grade</span></td>");
+document.write("  </tr>");
+document.write("</table>");
+go_and_assing_values(name,sub1,sub2,sub3);
+   
+function go_and_assing_values(name,sub1,sub2,sub3)
+{
+
+  document.getElementById("name").innerHTML = name; 
+  document.getElementById("sub1").innerHTML = sub1; 
+  document.getElementById("sub2").innerHTML = sub2; 
+  document.getElementById("sub3").innerHTML = sub3;
+}
+
+//document.getElementById('total').onClick = myfun();
+
+function calTotal(sub1,sub2,sub3)
+{
+  var total = sub1+sub2+sub3;
+  document.getElementById("total").innerHTML = total;
+ 
+}
+
+function calPercentage(sub1,sub2,sub3)
+{
+	var total = sub1+sub2+sub3;
+	var percentage = parseFloat(total/3).toFixed(2); 
+	document.getElementById("percentage").innerHTML = percentage;
+}
+
+
+function calGrade(sub1,sub2,sub3)
+{
+
+	var total = sub1+sub2+sub3;
+	var percentage = parseInt(total/3);
+	var dis = "Distiction";
+	var fc = "First Class";
+	var sc =	"Second Class";
+	if(percentage > 75) 
+		document.getElementById("grade").innerHTML = dis;
+	else if(percentage > 65 && percentage < 75)	
+		document.getElementById("grade").innerHTML = fc;
+   else
+   document.getElementById("grade").innerHTML = sc;
+}
+
+
+
+</script>
+ 
+</head>
+<body>
+
+<!-- <caption><h3>Student Info</h3></caption>
+<table border="1px" >
+  
+  <tr>
+   <th>Student name</th>
+   <td>John</td>
+ </tr>
+  <tr>
+    <th>Sub1 Marks</th>
+    <td>67</td>
+  </tr>
+  <tr>
+    <th>Sub2 Marks</th>
+    <td>76</td>
+  </tr>
+  <tr>
+    <th>Sub3 Marks</th>
+    <td>56</td>
+  </tr>
+  <tr>
+    <th>Total Marks</th>
+   <td><b id='total' onclick='calcTotal()'> </td>
+  </tr>
+  
+		
+  <tr>
+    <th>Percentage</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Grade</th>
+    <td></td>
+  </tr>
+</table>-->
+
+</body>
+</html>
+

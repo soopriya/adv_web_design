@@ -1,0 +1,368 @@
+<html>
+    <head>
+        <title>Chapter 6-Lab Exercise 7</title>
+        <style>
+            input
+            {
+               
+                padding-left:5px;
+            }
+            table td {padding-top: 10px; padding-bottom:10px; padding-left:10px; padding-right:20px;}
+        </style>
+        <script type="text/javascript">
+
+            function validateFirstName()
+            {
+		var first_name      =  document.forms["myForm"]["fname"].value;
+                var ename = document.getElementById("ename");
+                //var str=/(^[A-Za-z]{1,1})+([a-z]{1,19})$/;
+		var str = /^[a-zA-Z ]*$/;
+                if (first_name == str || first_name==null || first_name=="")
+                {
+                    ename.innerHTML="<font color='red'> First name must be filled out </font>";
+                    document.forms["myForm"]["fname"].focus();
+                    document.forms["myForm"]["fname"]="";
+                    return false;
+                }
+		else if (!str.test(first_name))
+		{
+ename.innerHTML="<font color='red'> First name must be contains only alphabets </font>";
+                    document.forms["myForm"]["fname"].focus();
+                    document.forms["myForm"]["fname"]="";
+                    return false;		
+		}
+                else
+                {
+                    ename.innerHTML="";
+                    return true;
+                }
+            }
+
+            function validateLastName()
+            {
+                var last_name       =  document.forms["myForm"]["lname"].value;
+                elname = document.getElementById('elname');
+                var sec = /^[a-zA-Z ]*$/;
+                 if (last_name == sec || last_name==null || last_name=="")
+                {
+                    elname.innerHTML="<font color='red'> last name must be filled out</font>";
+                    document.forms["myForm"]["lname"].focus();
+                    document.forms["myForm"]["lname"]="";
+                    return false;
+                }
+                else if (!sec.test(last_name))
+		{
+elname.innerHTML="<font color='red'> Last name must be contains only alphabets </font>";
+                    document.forms["myForm"]["lname"].focus();
+                    document.forms["myForm"]["lname"]="";
+                    return false;		
+		}
+                else
+                {
+                    elname.innerHTML="";
+                    return true;
+                }
+            }
+
+            function validateEmailId()
+            {
+                var email_id        =  document.forms["myForm"]["email"].value;
+                var eemail = document.getElementById('eemail');
+                var atpos = email_id.indexOf("@");
+                var dotpos = email_id.lastIndexOf(".");
+                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email_id.length)
+                {
+                    //  	alert("Not a valid e-mail address");
+                    eemail.innerHTML="<font color='red'> Not a valid e-mail address</font>";
+                    document.forms["myForm"]["email"].focus();
+                    document.forms["myForm"]["email"]="";
+                    return false;
+                }
+                else
+                {
+                    eemail.innerHTML="";
+                    return true;
+                }
+ 
+            }
+
+            function validatePassword()
+            {
+                var pass_word = document.forms["myForm"]["pwd"].value;
+                var epassword = document.getElementById('epassword');
+
+                if(pass_word=="")
+                {
+                    //alert("Please Enter Your Password");
+                    epassword.innerHTML="<font color='red'> Please Enter Your Password</font>";
+                    document.forms["myForm"]["pwd"].focus();
+                    document.forms["myForm"]["pwd"] = "";
+                    return false;
+                }
+	
+	
+                if ((pass_word.length < 4) || (pass_word.length > 8))
+                {
+                    //alert("Your Password must be 4 to 8 Character");
+                    epassword.innerHTML="<font color='red'> Your Password must be 4 to 8 Character</font>";
+                    document.forms["myForm"]["pwd"].focus();
+                    document.forms["myForm"]["pwd"] = "";
+                    return false;
+                }
+                else
+                {
+                    epassword.innerHTML="";
+                    return true;
+                }
+            }
+
+            function validateConfirmPassword()
+            {
+                var pass_word = document.forms["myForm"]["pwd"].value;
+                var conf_pass_word  =  document.forms["myForm"]["cpwd"].value;
+                var econfpassword = document.getElementById('econfpassword');
+	
+                if(pass_word!=conf_pass_word)
+                {
+                    //	alert("Your password and confirmation password do not match.");
+                    econfpassword.innerHTML="<font color='red'> Your password and confirmation password do not match.</font>";
+                    document.forms["myForm"]["cpwd"] = "";
+                    document.forms["myForm"]["cpwd"].focus();
+                    return false;
+                }
+                else
+                {
+                    econfpassword.innerHTML="";
+                    return true;
+                }
+            }
+
+            function validateGender()
+            {
+                var gender			  =   document.forms["myForm"]["gender"];
+                var egender = document.getElementById('egender');
+
+                if(gender[0].checked == false && gender[1].checked == false)
+                {
+                    //	alert("Please choose your Gender: Male or Female");
+                    egender.innerHTML="<font color='red'> Please choose your Gender: Male or Female</font>";
+                    //document.forms["myForm"]["gender"][0].focus();
+                    return false;
+                }
+                else
+                {
+                    egender.innerHTML="";
+                    return true;
+                }
+
+            }
+
+            function validateCity()
+            {
+
+                var city			  =   document.forms["myForm"]["city"];
+                var ecity = document.getElementById('ecity');
+
+                if(city.value == "Please select")
+                {
+                    //alert("Please select city");
+                    ecity.innerHTML="<font color='red'> Please select city </font>";
+                    document.forms["myForm"]["city"].focus();
+                    return false;
+                }
+                else
+                {
+                    ecity.innerHTML="";
+                    return true;
+                }
+   
+   
+            }
+
+            function validateTnc()
+            {
+                var tnc			  =   document.forms["myForm"]["terms"];
+                var etnc = document.getElementById('etnc');
+
+                if(!tnc.checked)
+                {
+                    //alert('You must agree to the terms first.');
+                    etnc.innerHTML="<font color='red'> You must agree to the terms first. </font>";
+                    document.forms["myForm"]["terms"].focus();
+                    return false;
+                }
+                else
+                {
+                    etnc.innerHTML="";
+                    return true;
+                }
+
+            }
+
+            function validateForm()
+            {
+                var first_name      =  document.forms["myForm"]["fname"].value;
+                var last_name       =  document.forms["myForm"]["lname"].value;
+                var email_id        =  document.forms["myForm"]["email"].value;
+                var pass_word       =  document.forms["myForm"]["pwd"].value;
+                var conf_pass_word  =  document.forms["myForm"]["cpwd"].value;
+                var gender			  =   document.forms["myForm"]["gender"];
+                var city			  =   document.forms["myForm"]["city"];
+                var tnc			  =   document.forms["myForm"]["terms"];
+
+                if(validateFirstName())
+                {
+     
+                    if(validateLastName())
+                    {
+                        if(validateEmailId())
+                        {
+                            if(validatePassword())
+                            {
+                                if(validateConfirmPassword())
+                                {
+                                    if(validateGender())
+                                    {
+                                        if(validateCity())
+                                        {
+                                            if(validateTnc())
+                                            { //alert("00000000000000000");
+                                                if((first_name.length!=0) && (last_name.length!=0)&& (email_id.length!=0) && (pass_word.length!=0) && (conf_pass_word.length!=0) )
+                                                {
+                                                    var id=document.getElementById('form_details');
+                                                    form_details.innerHTML="<center><h1><font color=green>Welcome to site</h1><br><h4><font color=red>Submission Successful!</font></h4></center>";
+                                                }
+                               
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else{
+                    return false;
+                }
+            }
+
+
+            /*
+        function validateForm()
+        {
+        var first_name      =  document.forms["myForm"]["fname"].value;
+        var last_name       =  document.forms["myForm"]["lname"].value;
+        var email_id        =  document.forms["myForm"]["email"].value;
+        var pass_word       =  document.forms["myForm"]["pwd"].value;
+        var conf_pass_word  =  document.forms["myForm"]["cpwd"].value;
+        var gender			  =   document.forms["myForm"]["gender"];
+        var city			  =   document.forms["myForm"]["city"];
+        var tnc			  =   document.forms["myForm"]["terms"];
+	
+        if (first_name==null || first_name=="")
+         {
+                alert("First name must be filled out");
+                //document.forms["myForm"]["fname"].focus();
+        //  	document.myForm.fname.focus();
+        //  		document.getElementById("fname").focus();
+                return false;
+          }
+ 
+         if (last_name==null || last_name=="")
+          {
+                alert("Last name must be filled out");
+                document.forms["myForm"]["lname"].focus();
+                return false;
+          }
+   
+        var atpos = email_id.indexOf("@");
+        var dotpos = email_id.lastIndexOf(".");
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email_id.length)
+          {
+                alert("Not a valid e-mail address");
+                document.forms["myForm"]["email"].focus();
+                return false;
+          }
+  
+          if(pass_word=="")
+                {
+                        alert("Please Enter Your Password");
+                        document.forms["myForm"]["pwd"].focus();
+                        return false;
+                }
+	
+                if ((pass_word.length < 4) || (pass_word.length > 8))
+                {
+                        alert("Your Password must be 4 to 8 Character");
+                        document.forms["myForm"]["pwd"].focus();
+                        return false;
+                }
+	
+                if(pass_word!=conf_pass_word)
+                {
+                        alert("Your password and confirmation password do not match.");
+                        document.forms["myForm"]["cpwd"].focus();
+                        return false;
+                }
+	
+                if(gender[0].checked == false && gender[1].checked == false)
+                {
+                        alert("Please choose your Gender: Male or Female");
+                        document.forms["myForm"]["gender"][0].focus();
+                        return false;
+                }
+   
+           if(city.value == "Please select")
+           {
+             alert("Please select city");
+                        document.forms["myForm"]["city"].focus();
+                        return false;
+           }
+   
+           if(!tnc.checked)
+                {
+                alert('You must agree to the terms first.');
+                document.forms["myForm"]["terms"].focus();
+                return false;
+                }
+             return( true );
+        }
+             */
+        </script>
+    </head>
+    <body>
+        <h3>Chapter 6-Lab Exercise 7: Event Handling and Client Side Validation</h3>
+        <fieldset>
+            <legend>Resistration Form</legend>
+
+            <form name="myForm"  method="post">
+                <div id="form_details">
+                    <table>
+                        <tr><td>
+                                <label>First name:</label></td>
+                            <!--<caption><h3 >Resistration Form</h3></caption>-->
+                            <td><input type="text" id="fname" name="fname" autofocus onblur="validateFirstName();"><span id="ename"></span></td></tr>
+                        <tr><td><label>Last name: </label></td><td><input type="text" name="lname" onblur="validateLastName()"><span id="elname"></span></td></tr>
+
+                        <tr><td><label>E-mail:</label></td><td><input type='text' name='ename' id='email' onblur="validateEmailId()"><span id="eemail"></span></td></tr>
+
+                        <tr><td><label>Password:</label></td><td><input type='password' name='pwd' id='pwd' onblur="validatePassword()"><span id="epassword" ></span></td></tr>
+                        <tr><td><label>Confirm Password:</label></td><td><input type='password' name='cpwd' id='cpwd' onblur="validateConfirmPassword()"><span id="econfpassword"></span></td></tr>
+                        <tr><td><label>Gender: </label></td><td><input type='radio' name='gender' value='male' onblur="validateGender()">Male
+                                <input type='radio' name='gender' value='female' onblur="validateGender()">Female<span id="egender"></span></td></tr>
+                        <tr><td><label>City:</label></td><td><select name='city' onblur="validateCity()">
+                                    <option >Please select</option>
+                                    <option >Pune</option>
+                                    <option >Mumbai</option>
+                                    <option >Benglore</option>
+                                    <option >Delhi</option>
+                                </select><span id="ecity"></span></td></tr>
+                        <tr><td><label>Terms & conditions:</label></td><td><input type='checkbox' name='terms' onblur="validateTnc()"><span id="etnc"></span></td>
+                        <tr><td><label><input id="x" type="button" value="Submit"  onClick="validateForm()" ></label></td></tr>
+                    </table>
+                </div>
+            </form>
+        </fieldset>
+    </body>
+</html>
+

@@ -1,0 +1,60 @@
+<html>
+<head><title>Chapter 6-Lab Exercise 2</title>
+<style>
+table tr { 
+    display: block;
+    margin: 12px 10px 15px 15px;
+}
+
+
+</style>
+<script type="text/javascript">
+ function add()
+ {
+       
+   var a=parseInt(document.getElementById('no1').value);
+   var b=parseInt(document.getElementById('no2').value);
+   var add=a+b;
+   document.getElementById('result').value='Addition is= '+add;
+ }
+   
+   function sub()
+  {
+   var a=parseInt(document.getElementById('no1').value);
+   var b=parseInt(document.getElementById('no2').value);
+   var sub=a-b;
+   document.getElementById('result').value='Substraction is= ' +sub;
+  }
+   function div()
+  {
+   var a=parseInt(document.getElementById('no1').value);
+   var b=parseInt(document.getElementById('no2').value);
+   var div=a/b;
+   document.getElementById('result').value='Division is= ' +div.toFixed(2);
+  }
+</script>
+</head>
+<body>
+<h3>Chapter 6-Lab Exercise 2:Event Handling and Client Side Validation</h3>
+  <table>
+   <tr style="">
+      <td>First Number</td>
+      <td> <input style= margin-left:30px; type='text' id='no1'></td>
+   </tr>
+   <tr>
+      <td>Second Number</td>
+      <td> <input style= margin-left:10px;type='text' id='no2'></td>
+   </tr>
+   <tr>
+      <td>Result</td>
+      <td><input style= margin-left:85px;type='text' id='result'></td>
+   </tr>
+   <tr>
+      <td colspan='2'>
+      <input type ='button' value='ADD' onclick='add()'>
+      <input type ='button' value='SUB' onclick='sub()'>
+      <input type ='button' value='DIV' onclick='div()'>
+      </td>
+  </table>
+</body>
+</html> 

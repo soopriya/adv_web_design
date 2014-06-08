@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 6-Lab Exercise 5</title>
+<style>
+div.emptyblock
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+height:200px;
+
+}
+
+/*#image{
+width:220px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+height:200px;
+
+}*/
+
+</style>
+<script type="text/javascript" >
+function xyz(){
+var x = document.getElementById("myImg").src;
+//alert(x);
+document.getElementById("image").src=x;
+//document.getElementById("demo").innerHTML=x;
+}
+</script>
+</head>
+<body>
+    <h3>Chapter 6-Lab Exercise 5: Event Handling and Client Side Validation</h3>
+<div class="emptyblock">
+<img id="image" src="smiley.gif" width="220px" height="200px">
+</div>
+
+<img id="image" src="smiley.gif" width="160" height="120">
+<hr>
+<img id="myImg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTjlz0eYHrzmEgWQ-xCtzyxIkA6YoZHpG0DnucD1syQXtTLyoZvuQ" alt="" height="100" width="100" onclick="xyz()"/>
+
+<img id="myImg" src="http://t1.gstatic.com/images?q=tbn:ANd9GcRB3oGltLj2h94dSLkcil5qDfQB-iGabn3Z1Y2pIb5X77qmBcwY" alt="" height="100" width="100">
+
+<img id="myImg" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtOpghqaqVsn_ElQ-9ERLxUffj8sQ9frGD7JWLgZSz_5vKia_P" alt="" height="100" width="100">
+
+<img id="myImg" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRwezZKYm7TcibLmJFQqAJ_tZMRLy-0tpW40PKtwi7J4i3M2gl6" alt="" height="100" width="100">
+</body>
+</html>
+

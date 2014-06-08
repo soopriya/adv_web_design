@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Chapter 6-Lab Exercise 3</title>
+<script>
+function toggle(el){
+    if(el.className!="pause")
+    {
+       el.className="pause";
+document.body.style.background='black'
+    }
+    else if(el.className=="pause")
+    {
+      el.className="play";
+document.body.style.background='white'
+    }
+
+    return false;
+} 
+
+function ChangeStyle()
+{ 
+  document.getElementById('h2').style.color='red';
+ document.getElementById('h2').style.fontSize=50;
+}
+
+</script>
+
+
+</head>
+<body>
+<h3>Chapter 6-Lab Exercise 3:Event Handling and Client Side Validation</h3>
+<hr><h2 id='h2'>SEED Infotech</h2><hr>
+<input type='button' onclick='ChangeStyle()' value='ChangeStyle'>
+<input type="button" value="changeBckgroundColor" class="play" onclick="toggle(this);"/>
+</body>
+</html

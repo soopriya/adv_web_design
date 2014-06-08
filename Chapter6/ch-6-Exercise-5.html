@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chapter 6-Lab Exercise 5</title>
+<style>
+div.emptyblock
+{
+width:360px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+height:300px;
+
+}
+
+.centered {
+  position: fixed;
+  top: 30%;
+  left: 45%;
+  margin-top: -60px;
+  margin-left: -100px;
+}
+
+/*body{
+background: rgba(224,239,249,1);
+background: -moz-linear-gradient(left, rgba(224,239,249,1) 0%, rgba(239,245,248,1) 19%, rgba(242,246,248,1) 23%, rgba(216,225,231,1) 57%, rgba(216,225,231,1) 61%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(224,239,249,1)), color-stop(19%, rgba(239,245,248,1)), color-stop(23%, rgba(242,246,248,1)), color-stop(57%, rgba(216,225,231,1)), color-stop(61%, rgba(216,225,231,1)));
+background: -webkit-linear-gradient(left, rgba(224,239,249,1) 0%, rgba(239,245,248,1) 19%, rgba(242,246,248,1) 23%, rgba(216,225,231,1) 57%, rgba(216,225,231,1) 61%);
+background: -o-linear-gradient(left, rgba(224,239,249,1) 0%, rgba(239,245,248,1) 19%, rgba(242,246,248,1) 23%, rgba(216,225,231,1) 57%, rgba(216,225,231,1) 61%);
+background: -ms-linear-gradient(left, rgba(224,239,249,1) 0%, rgba(239,245,248,1) 19%, rgba(242,246,248,1) 23%, rgba(216,225,231,1) 57%, rgba(216,225,231,1) 61%);
+background: linear-gradient(to right, rgba(224,239,249,1) 0%, rgba(239,245,248,1) 19%, rgba(242,246,248,1) 23%, rgba(216,225,231,1) 57%, rgba(216,225,231,1) 61%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eff9', endColorstr='#d8e1e7', GradientType=1 );
+}
+*/
+body{
+background-color:pink 	; 
+}
+</style>
+<script>
+function imageHighlight(x){
+document.getElementById("imageid").src=x;
+}
+</script>
+</head>
+<body>
+<div class="centered">
+<div class="emptyblock">
+<img id="imageid" alt="No Image Found" height="300" width="360">
+</div>
+<hr>
+<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTjlz0eYHrzmEgWQ-xCtzyxIkA6YoZHpG0DnucD1syQXtTLyoZvuQ" alt="" height="100" width="100" onmouseover="imageHighlight(this.src);">
+
+<img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRB3oGltLj2h94dSLkcil5qDfQB-iGabn3Z1Y2pIb5X77qmBcwY" alt="" height="100" width="100" onmouseover="imageHighlight(this.src);">
+
+<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtOpghqaqVsn_ElQ-9ERLxUffj8sQ9frGD7JWLgZSz_5vKia_P" alt="" height="100" width="100" onmouseover="imageHighlight(this.src);">
+
+<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRwezZKYm7TcibLmJFQqAJ_tZMRLy-0tpW40PKtwi7J4i3M2gl6" alt="" height="100" width="100" onmouseover="imageHighlight(this.src);">
+</div>
+</body>
+</html>
+
