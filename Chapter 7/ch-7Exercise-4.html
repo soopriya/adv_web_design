@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>
+            ch-7-Exercise-4
+        </title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" >
+            $(document).ready(function(){
+                $("#play_pause_Btn").click(playPauseHandler);
+                $("#mute_unmute_Btn").click(muteUnmuteHandler);
+
+                var video = document.getElementById("sampleVideo");
+                
+                   $("#sampleVideo").on("ended", function() {
+                    $("#play_pause_Btn").prop("value","Play");
+                    $("#videoProgress").html("0:00");
+                    
+   
+                });
+
+            });
+    
+            // function for mute and unmute of a volume for video
+            function muteUnmuteHandler(){
+                var video = document.getElementById("sampleVideo");
+                if(video.muted == false){
+                    video.muted = true;
+                    $("#mute_unmute_Btn").prop("value","UnMute");
+                    $(this).css("borderColor","#CD853F");
+                }
+                else{
+                    video.muted = false;
+                    $("#mute_unmute_Btn").prop("value","Mute");
+                    $(this).css("borderColor","#CD853F");
+                }
+            }
+
+            // function for play and pause a video
+            function playPauseHandler()
+            {
+                //alert("onHandler function called");
+                var video = document.getElementById("sampleVideo");
+                if(video.paused)
+                {
+                    video.play();
+                    $("#play_pause_Btn").prop("value","Pause");
+                }
+                else{
+                    video.pause();
+                    $("#play_pause_Btn").prop("value","Play");
+  
+                }
+                //border:1px solid  #CD853F;
+                $(this).css("borderColor","#CD853F");
+            }
+
+            // function for stop a video
+            function stopHandler(){
+                var video = document.getElementById("sampleVideo");
+                video.pause();
+                video.currentTime=0;
+                $("#play_pause_Btn").prop("value","Play");
+                //$(this).css("borderColor","#CD853F");
+            }
+
+          
+
+
+        </script>
+        <style type="text/css">
+
+            #sampleVideo{
+                height: 305px;
+                width: 575px;
+                z-index:-1;
+            }
+            #videoControls{
+                position:absolute;
+                top: 365px;
+                left: 30px;
+            }
+
+            video::-webkit-media-controls {
+                display:none !important;
+            }
+
+            input[type=button]{
+                background: black;
+                color: white;
+                border:1px solid  black;
+            }
+           #mute_unmute_Btn
+           {
+           	margin-left: 20px; 
+           }
+
+        </style>
+    </head>
+    <body>
+       <h2>Lab Exercise-4</h2>
+        <div id="media-player">
+            <video id="sampleVideo" src="video/podcast_teaser.mp4" >
+                <source src="video/podcast_teaser.ogv"/>
+                <source src="video/podcast_teaser.webm"/>
+               
+                <object data="videoplayer.swf" >
+                    <param name="flashvars" value="video/podcast_teaser.mp4" />
+		HTML5 video and flash is not supported. 	
+                </object>
+            </video>
+            <div id="videoControls">
+              <input  type="image" id="play_pause_Btn" src="play_pause_btn.jpeg" />
+
+        
+                <input type="image" id="mute_unmute_Btn" src="mute_unmute_button.jpeg"/>
+            </div>
+        </div>
+    </body>
+</html>
